@@ -1,11 +1,11 @@
-name: Audit
+name: Checks
 
 on: push
 
 jobs:
   audit:
     runs-on: ubuntu-latest
-    name: Audit
+    name: Checks
 
     steps:
       - name: Git checkout

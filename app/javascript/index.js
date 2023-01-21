@@ -1,2 +1,5 @@
-const iCantNoMore = "end of the day comming";
-console.table(iCantNoMore);
+import Celule from "./celule/celule";
+
+const celule = new Celule();
+
+console.table(celule);

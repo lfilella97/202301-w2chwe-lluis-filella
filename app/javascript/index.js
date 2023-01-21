@@ -1,4 +1,4 @@
-import Celule from "./celule/celule";
+import Celule from "./celule/celule.js";
 
 const celule = new Celule();
 

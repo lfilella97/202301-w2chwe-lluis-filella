@@ -1,25 +1,15 @@
-import Celule from "./celule/celule.js";
-
+import Celule from "./Celule/Celule.js";
 import generateTable from "./generateTable/generateTable.js";
 import survivalCheck from "./survivalCheck/survivalCheck.js";
 import changeStatus from "./changeStatus/changeStatus.js";
+import htmlTable from "./htmlTable/htmlTable.js";
 
 const board = generateTable(26, 57, Celule);
 
-const run = () => {
+const startGame = () => {
   survivalCheck(board);
   changeStatus(board);
-  const HTMLtable = document.querySelector("table");
-  HTMLtable.innerHTML = null;
-  for (let i = 0; i < board.length; i++) {
-    const row = document.createElement("tr");
-    HTMLtable.appendChild(row);
-    for (let j = 0; j < board[i].length; j++) {
-      const cell = document.createElement("td");
-      row.appendChild(cell);
-      cell.innerHTML = board[i][j].face;
-    }
-  }
+  htmlTable(board);
 };
 
-setInterval(run, 500);
+setInterval(startGame, 500);

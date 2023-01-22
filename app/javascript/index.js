@@ -4,7 +4,7 @@ import survivalCheck from "./survivalCheck/survivalCheck.js";
 import changeStatus from "./changeStatus/changeStatus.js";
 import htmlTable from "./htmlTable/htmlTable.js";
 
-const board = generateTable(26, 57, Celule);
+const board = generateTable(28, 62, Celule);
 
 const startGame = () => {
   survivalCheck(board);

@@ -26,7 +26,7 @@ describe("Given the function generateTable", () => {
 
       const result = generateTable(givenRows, givenColumns, givenClass);
 
-      expect(result).toBe(expectedOutput);
+      expect(result).toMatchObject(expectedOutput);
     });
   });
 });

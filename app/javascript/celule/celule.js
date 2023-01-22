@@ -2,13 +2,12 @@ class Celule {
   isAlive;
   positionX;
   positionY;
-  willChange;
   survivorsArroud = 0;
   face;
 
   constructor(positionX, positionY) {
     this.isAlive = Boolean(Math.floor(Math.random() * 2));
-    this.face = this.isAlive ? "😊" : "⬛";
+    this.face = this.isAlive ? "⬛" : "⬜";
     this.positionX = positionX;
     this.positionY = positionY;
   }
@@ -40,12 +39,12 @@ class Celule {
       (this.survivorsArroud < 2 || this.survivorsArroud > 3)
     ) {
       this.isAlive = false;
-      this.face = this.isAlive ? "😊" : "⬛";
+      this.face = this.isAlive ? "⬛" : "⬜";
     }
 
     if (!this.isAlive && this.survivorsArroud === 3) {
       this.isAlive = true;
-      this.face = this.isAlive ? "😊" : "⬛";
+      this.face = this.isAlive ? "⬛" : "⬜";
     }
   }
 }
